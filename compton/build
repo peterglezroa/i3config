@@ -1,0 +1,3 @@
+#!/bin/bash
+sudo apt-get install compton
+echo "opacity-rule = [\"85:class_g = \'gnome-terminal\'\"];" > ~/.config/compton.conf

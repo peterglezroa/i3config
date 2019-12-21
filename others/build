@@ -1,0 +1,3 @@
+#!/bin/bash
+# Wallpaper (feh)
+sudo apt-get install feh
