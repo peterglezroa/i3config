@@ -1,0 +1,3 @@
+# i3 config
+a:~/.config/i3/config:tail:# Crompton (use gnometerminal preferences)
+a:~/.config/i3/config:tail:exec --no-startup-id compton
