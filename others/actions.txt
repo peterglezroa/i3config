@@ -1,0 +1,2 @@
+a:~/.config/i3/config:# Wallpapers
+a:~/.config/i3/config:exec --no-startup-id feh --randomize --bg-scale ~/Pictures/wallpapers/*
