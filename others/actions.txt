@@ -1,2 +1,6 @@
+# Wallpapers
+l:~/Pictures/wallpapers:other/wallpapers
 a:~/.config/i3/config:# Wallpapers
 a:~/.config/i3/config:exec --no-startup-id feh --randomize --bg-scale ~/Pictures/wallpapers/*
+# Fonts
+l:~/.fonts:other/fonts
