@@ -1,0 +1,15 @@
+# Controls
+a:~/.config/i3/config:tail:# Audio controls
+a:~/.config/i3/config:tail:bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
+a:~/.config/i3/config:tail:bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
+a:~/.config/i3/config:tail:bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+a:~/.config/i3/config:tail:# Screen brightness controls
+
+# Variables workspace
+a:~/.config/i3/config:head:set $workspace1 "Terminals " 
+a:~/.config/i3/config:head:set $workspace2 "Firefox "
+a:~/.config/i3/config:head:set $workspace3 "Social "
+a:~/.config/i3/config:head:set $workspace10 "Nigga..."
+m:~/.config/i3/config:replace:workspace 1:workspace $workspace1
+m:~/.config/i3/config:replace:workspace 2:workspace $workspace2
+m:~/.config/i3/config:replace:workspace 3:workspace $workspace3
