@@ -6,10 +6,10 @@ a:~/.config/i3/config:tail:bindsym XF86AudioMute exec --no-startup-id pactl set-
 a:~/.config/i3/config:tail:# Screen brightness controls
 
 # Variables workspace
-a:~/.config/i3/config:head:set $workspace1 "Terminals " 
-a:~/.config/i3/config:head:set $workspace2 "Firefox "
-a:~/.config/i3/config:head:set $workspace3 "Social "
-a:~/.config/i3/config:head:set $workspace10 "Nigga..."
+a:~/.config/i3/config:head:set $workspace1 "" 
+a:~/.config/i3/config:head:set $workspace2 "龜"
+a:~/.config/i3/config:head:set $workspace3 ""
+a:~/.config/i3/config:head:set $workspace10 "?"
 m:~/.config/i3/config:replace:workspace 1:workspace $workspace1
 m:~/.config/i3/config:replace:workspace 2:workspace $workspace2
 m:~/.config/i3/config:replace:workspace 3:workspace $workspace3
