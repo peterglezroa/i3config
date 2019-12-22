@@ -5,6 +5,11 @@ a:~/.config/i3/config:tail:bindsym XF86AudioLowerVolume exec --no-startup-id pac
 a:~/.config/i3/config:tail:bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
 a:~/.config/i3/config:tail:# Screen brightness controls
 
+# Brightness
+f:~/bin/brightness:others/brightness
+a:~/.config/i3/config:tail:bindsym XF86MonBrightnessUp exec --no-startup-id $HOME/bin/brightness -inc # increase screen brightness
+a:~/.config/i3/config:tail:bindsym XF86MonBrightnessDown exec --no-startup-id $HOME/bin/brightness -dec
+
 # Variables workspace
 a:~/.config/i3/config:head:set $workspace1 "" 
 a:~/.config/i3/config:head:set $workspace2 "龜"
