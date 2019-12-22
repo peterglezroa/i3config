@@ -1,0 +1,2 @@
+# Config file
+l:~/.config/i3status:i3status
