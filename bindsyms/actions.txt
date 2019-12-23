@@ -6,9 +6,19 @@ a:~/.config/i3/config:tail:bindsym XF86AudioMute exec --no-startup-id pactl set-
 a:~/.config/i3/config:tail:# Screen brightness controls
 
 # Brightness
-f:~/bin/brightness:others/brightness
+f:~/bin/brightness:scripts/brightness
 a:~/.config/i3/config:tail:bindsym XF86MonBrightnessUp exec --no-startup-id $HOME/bin/brightness -inc # increase screen brightness
 a:~/.config/i3/config:tail:bindsym XF86MonBrightnessDown exec --no-startup-id $HOME/bin/brightness -dec
+
+# Apps
+a:~/.config/i3/config:tail:# Custom binds
+a:~/.config/i3/config:tail:bindsym $mod+Shift+s exec --no-startup-id gnome-control-center
+a:~/.config/i3/config:tail:bindysm $mod+Shift+m exec --no-startup-id gnome-system-monitor
+
+# Workflow
+f:~/bin/workflow:scripts/workflow
+f:~/bin/.workflow_config:scripts/workflow_config
+a:~/.config/i3/config:tail:bindsym $mod+Shift+w exec --no-startup-id $HOME/bin/workflow
 
 # Variables workspace
 a:~/.config/i3/config:head:set $workspace1 "" 

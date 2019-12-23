@@ -1,0 +1,14 @@
+
+firefox
+gnome-terminal
+:i3-msg resize shrink left 520
+
+
+spotify
+
+
+gnome-terminal
+:i3-msg split v
+gnome-terminal
+gnome-terminal
+:i3-msg move right
