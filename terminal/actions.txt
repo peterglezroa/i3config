@@ -1,0 +1,11 @@
+a:~/.bashrc:tail:# powerlineshell
+a:~/.bashrc:tail:function _update_ps1(){
+a:~/.bashrc:tail:	PS1=$(powerline-shell $?)
+a:~/.bashrc:tail:}
+a:~/.bashrc:tail:if [[ $TERM != linux && ! $PROMPT_COMMAND =~ _update_ps1 ]];then
+a:~/.bashrc:tail:	PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
+a:~/.bashrc:tail:fi
+# neo fetch
+a:~/.bashrc:tail:# neofetch
+a:~/.bashrc:tail:neofetch
+l:~/.powerline-shell.json/config
