@@ -24,7 +24,9 @@ a:~/.config/i3/config:tail:bindsym $mod+Shift+w exec --no-startup-id $HOME/bin/w
 a:~/.config/i3/config:head:set $workspace1 "" 
 a:~/.config/i3/config:head:set $workspace2 "龜"
 a:~/.config/i3/config:head:set $workspace3 ""
+a:~/.config/i3/config:head:set $workspace4 ""
 a:~/.config/i3/config:head:set $workspace10 "?"
 m:~/.config/i3/config:replace:workspace 1:workspace $workspace1
 m:~/.config/i3/config:replace:workspace 2:workspace $workspace2
 m:~/.config/i3/config:replace:workspace 3:workspace $workspace3
+m:~/.config/i3/config:replace:workspace 4:workspace $workspace4
