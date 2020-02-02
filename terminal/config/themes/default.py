@@ -16,8 +16,8 @@ class DefaultColor(object):
     HOSTNAME_BG = 238
 
     HOME_SPECIAL_DISPLAY = True
-    HOME_BG = 240
-    HOME_FG = 15  # white
+    HOME_BG = 25
+    HOME_FG = 15  # whit
     PATH_BG = 237  # dark grey
     PATH_FG = 250  # light grey
     CWD_FG = 254  # nearly-white grey

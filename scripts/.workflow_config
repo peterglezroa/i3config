@@ -1,5 +1,11 @@
 
 gnome-terminal
+:i3-msg split vertical
+gnome-terminal
+:i3-msg resize grow up 420
+:i3-msg split horizontal
+firefox --new-window www.google.com
+:i3-msg resize shrink left 500
 
 
 firefox
@@ -11,7 +17,9 @@ spotify
 
 
 firefox --new-window www.github.com
+:i3-msg split vertical
 gnome-terminal
+:i3-msg resize shrink up 400
 
 
 google-chrome www.trello.com
