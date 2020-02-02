@@ -14,5 +14,5 @@ firefox --new-window www.github.com
 gnome-terminal
 
 
-firefox --new-window www.trello.com
+google-chrome www.trello.com
 
