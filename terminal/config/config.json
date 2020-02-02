@@ -3,12 +3,11 @@
 	"segments": [
 		"virtual_env",
 		"git",
-		"username",
 		"ssh" ,
 		"cwd"
 	],
 	"cwd":{
-		"max_depth": 3 ,
+		"max_depth": 2 ,
 		"bg_color": 31
 	}
 }
