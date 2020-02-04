@@ -4,13 +4,11 @@ gnome-terminal
 gnome-terminal
 :i3-msg resize grow up 420
 :i3-msg split horizontal
-firefox --new-window www.google.com
+gnome-terminal
 :i3-msg resize shrink left 500
 
 
 firefox
-gnome-terminal
-:i3-msg resize shrink left 520
 
 
 spotify
