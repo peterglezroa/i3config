@@ -4,6 +4,10 @@ a:~/.config/i3/config:tail:bindsym XF86AudioRaiseVolume exec --no-startup-id pac
 a:~/.config/i3/config:tail:bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
 a:~/.config/i3/config:tail:bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
 a:~/.config/i3/config:tail:# Screen brightness controls
+a:~/.config/i3/config:tail:bindsym XF86MonBrightnessUp exec --no-startup-id $HOME/bin/brightness -inc #
+a:~/.config/i3/config:tail:bindsym XF86MonBrightnessDown exec --no-startup-id $HOME/bin/brightness -dec
+a:~/.config/i3/config:tail:# Monitor toggle
+a:~/.config/i3/config:tail:bindsym $mod+m exec --no-startup-id $HOME/bin/monitors --toggle
 
 # Brightness
 f:~/bin/brightness:scripts/brightness
