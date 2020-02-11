@@ -9,6 +9,9 @@ gnome-terminal
 
 
 firefox
+:i3-msg split horizontal
+firefox
+:i3-msg resize grow shrink 400
 
 
 spotify

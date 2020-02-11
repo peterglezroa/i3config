@@ -7,7 +7,7 @@
 		"cwd"
 	],
 	"cwd":{
-		"max_depth": 2 ,
+		"max_depth": 10,
 		"bg_color": 31
 	}
 }
