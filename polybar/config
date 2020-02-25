@@ -66,8 +66,8 @@ font-3 = Font Awesome 5 Brands:pixelsize=12;1
 ;modules-right = xbacklight alsa pulseaudio xkeyboard memory cpu wlan eth battery temperature date powermenu
 
 modules-left = bspwm i3
-modules-center = mpd
-modules-right = pulseaudio wlan eth battery temperature date powermenu
+modules-center = mpd 
+modules-right = pulseaudio wlan eth battery memory temperature date powermenu
 
 tray-position = right
 tray-padding = 2
@@ -111,18 +111,10 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
 
-;font-0 = fixed:pixelsize=10;1
-;font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
-;font-2 = siji:pixelsize=10;1
-
 font-0 = fixed:pixelsize=10;1
 font-1 = Font Awesome 5 Free:style=Regular:pixelsize=12;1
 font-2 = Font Awesome 5 Free:style=Solid:pixelsize=12;1
 font-3 = Font Awesome 5 Brands:pixelsize=12;1
-
-;modules-left = bspwm i3
-;modules-center = mpd
-;modules-right = xbacklight alsa pulseaudio xkeyboard memory cpu wlan eth battery temperature date powermenu
 
 modules-left = bspwm i3
 modules-center = mpd
@@ -130,10 +122,6 @@ modules-right = pulseaudio wlan eth battery temperature date powermenu
 
 tray-position = right
 tray-padding = 2
-;tray-background = #0063ff
-
-;wm-restack = bspwm
-;wm-restack = i3
 
 ;override-redirect = true
 
@@ -284,8 +272,8 @@ label = %percentage:2%%
 [module/memory]
 type = internal/memory
 interval = 2
-format-prefix = " "
-format-prefix-foreground = ${colors.foreground-alt}
+format-prefix = " "
+format-prefix-foreground = ${colors.foreground}
 format-underline = #4bffdc
 label = %percentage_used%%
 
@@ -335,7 +323,7 @@ date = %Y-%m-%d
 date-alt = " %Y-%m-%d"
 
 time = %H:%M
-time-alt = %H:%M:%S
+time-alt = %H:%M
 
 format-prefix =" "
 format-prefix-foreground = #fffff
@@ -349,7 +337,7 @@ type = internal/pulseaudio
 format-volume = <label-volume> <bar-volume>
 label-volume =  %percentage%%
 label-volume-foreground = ${root.foreground}
-label-volume-underline= #04DB00
+;label-volume-underline= #04DB00
 
 label-muted =  (%percentage%)
 label-muted-foreground = #666
@@ -363,9 +351,9 @@ bar-volume-foreground-4 = #55aa55
 bar-volume-foreground-5 = #f5a70a
 bar-volume-foreground-6 = #ff5555
 bar-volume-gradient = false
-bar-volume-indicator = |
+bar-volume-indicator = O
 bar-volume-indicator-font = 2
-bar-volume-fill = ─
+bar-volume-fill = =
 bar-volume-fill-font = 2
 bar-volume-empty = ─
 bar-volume-empty-font = 2
@@ -403,7 +391,7 @@ bar-volume-empty-foreground = ${colors.foreground-alt}
 type = internal/battery
 battery = BAT0
 adapter = AC0
-full-at = 99
+full-at = 95
 
 format-charging-prefix = ""
 format-charging = <animation-charging> <label-charging>
