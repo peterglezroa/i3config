@@ -69,7 +69,7 @@ modules-left = bspwm i3
 modules-center = mpd 
 modules-right = pulseaudio wlan eth battery memory temperature date powermenu
 
-tray-position = right
+tray-position = top 
 tray-padding = 2
 ;tray-background = #0063ff
 
@@ -120,7 +120,7 @@ modules-left = bspwm i3
 modules-center = mpd
 modules-right = pulseaudio wlan eth battery temperature date powermenu
 
-tray-position = right
+tray-position = top
 tray-padding = 2
 
 ;override-redirect = true
