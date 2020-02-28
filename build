@@ -1,0 +1,6 @@
+#!/bin/bash
+# a -> add to file
+# m -> modify file
+# f -> file
+# d -> directory
+# l -> soft link

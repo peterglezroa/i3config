@@ -1,0 +1,15 @@
+# Wallpapers
+l:~/Pictures/wallpapers:other/wallpapers
+a:~/.config/i3/config:tail:# Wallpapers
+a:~/.config/i3/config:tail:exec --no-startup-id feh --randomize --bg-scale ~/Pictures/wallpapers/*
+
+# Fonts
+l:~/.fonts:other/fonts
+a:~/.config/i3/config:tail:# class		border			backgr			text		indic	child_border
+a:~/.config/i3/config:tail:client.focused_inactive #0d1010 #212121 #d9d9d9 #0d1010 #063340
+a:~/.config/i3/config:tail:client.unfocused #0d1010 #212121 #d9d9d9 #0d1010 #063340
+a:~/.config/i3/config:tail:client.focused #d9d9d9 #cecece #0000000 #d9d9d9 #d9d9d9
+
+# LoginWallpaper needs sudo
+#m:/usr/share/gnome-shell/theme/ubuntu.css:background: #2c001e url(resource:///org/gnome/shell/theme/noise-texture.png);:background: #2c001e url(file:///home/peterglezroa/Pictures/wallpapers/wallpaper.jpg);\nbackground-repeat: no-repeat;\nbackground-size: cover;\nbackground-position: center;
+

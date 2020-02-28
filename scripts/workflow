@@ -1,0 +1,50 @@
+#!/bin/bash
+# needs wmctrl
+configfile="$HOME/bin/.workflow_config"
+nextworkspace=1
+activeworkspace=1
+openedwindows=$(wmctrl -l | wc -l)
+windows=$openedwindows
+while IFS= read -r line
+do
+	# Check if going to next workspace
+	wc=$(echo $line | wc -w)
+	if test $wc -eq 0
+	then
+		nextworkspace=1
+		echo "--------------"
+	# Open next workspace
+	elif test $nextworkspace -eq 1
+	then
+		echo "Workspace: $line"
+		# Get workspace info
+		workspace=$(wmctrl -d | awk '$9 == line' line="$line" | tr -s ' ' '#')
+		# Check how many windows are opened in workspace
+		activeworkspace=$(wmctrl -l | awk '$2 == workspace' workspace="$(echo $workspace | cut -f1 -d#)" | wc -l)
+		# Dont modify active workspaces
+		i3-msg workspace $line
+		nextworkspace=0
+	# Open windows
+	elif test $activeworkspace -eq 0
+	then
+		# Check if its i3 command
+		cmd=$(echo $line | egrep :)
+		if test $? -eq 0
+		then
+			# Exec command
+			echo "cmd $line"
+			line=$(echo $line | cut -f2 -d:)
+			$line
+		else
+			echo "open $line"
+			# Open window
+			windows=$(($windows+1))
+			$line &
+			# Wait for window to open completly
+			while test $openedwindows -lt $windows
+			do
+				openedwindows=$(wmctrl -l | wc -l)
+			done
+		fi
+	fi
+done < "$configfile"

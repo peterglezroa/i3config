@@ -1,0 +1,5 @@
+# i3 config
+a:~/.config/i3/config:# i3 gaps
+a:~/.config/i3/config:gaps inner 30
+a:~/.config/i3/config:gaps outer 30
+for_window [class="^.*"] border pixel 2 #get rid of tittlebars because gaps doesnt work

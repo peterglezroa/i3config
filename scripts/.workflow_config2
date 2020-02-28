@@ -1,0 +1,9 @@
+4
+gnome-terminal 
+:i3-msg split v
+gnome-terminal
+gnome-terminal 
+:i3-msg move right
+
+5
+firefox

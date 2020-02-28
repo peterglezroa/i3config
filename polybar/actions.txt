@@ -1,0 +1,6 @@
+# Config folder
+l:~/.config/polybar:polybar
+a:~/.config/i3/config:head:exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+mr:~/.config/i3/config:bar {
+mr:~/.config/i3/config:}
+mr:~/.config/i3/config:i3bar_command i3bar
