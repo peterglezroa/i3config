@@ -1,2 +1,3 @@
 # Config folder
-l:~/.config/polybar:polybar
+l:~/.config/albert/albert.con:config
+# Commentar la linea de $mod+d
