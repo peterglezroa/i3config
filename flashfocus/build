@@ -1,0 +1,4 @@
+#!/bin/bash
+# flashfocus
+sudo apt-get install libxcb-render0-dev libffi-dev python-dev python-cffi
+pip install flashfocus
