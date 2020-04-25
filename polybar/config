@@ -26,12 +26,13 @@
 
 ; COLORS ----------------------------------------------------------
 [colors]
-background = #44000000
+background = #22000000
 background-alt = #cc444444
 foreground = #dfdfdf
 foreground-alt = #555
-primary = #4E9970 
-secondary = #e60053
+primary = #55A679 
+;primary = #3C7556
+secondary = #2E5941 
 alert = #bd2c40
 ;------------------------------------------------------------------
 
@@ -69,7 +70,7 @@ modules-left = bspwm i3
 modules-center = mpd 
 modules-right = pulseaudio wlan eth battery memory temperature date 
 
-tray-position = top 
+tray-position = center
 tray-padding = 2
 cursor-click = pointer
 cursor-scroll = ns-resize
@@ -182,19 +183,20 @@ label-mode-background = ${colors.primary}
 
 ; focused = Active workspace on focused monitor
 label-focused = %name%
-label-focused-foreground = #fffff
-label-focused-background = ${colors.primary}
+label-focused-foreground = #ffffffff 
+label-focused-background = ${colors.background}
 label-focused-underline= #00000000
 label-focused-padding = 2
 
 ; unfocused = Inactive workspace on any monitor
 label-unfocused = %name%
 label-unfocused-padding = 2
+label-unfocused-foreground = ${colors.primary}
 
 ; visible = Active workspace on unfocused monitor
 label-visible = %name%
+label-visible-foreground = #ffbbbbbb 
 ; label-visible-background = ${self.label-focused-background}
-label-visible-background = #0000
 label-visible-underline = ${self.label-focused-underline}
 label-visible-padding = ${self.label-focused-padding}
 

@@ -22,3 +22,8 @@ firefox --new-window www.github.com
 
 google-chrome www.trello.com
 
+
+TogglDesktop
+:i3-msg split vertical
+firefox 
+:i3-msg resize grow up 280
