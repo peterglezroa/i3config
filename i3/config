@@ -188,7 +188,7 @@ gaps outer 10
 for_window [class="^.*"] border pixel 2 #get rid of tittlebars because gaps doesnt work
 
 # Compton transparency (use gnome preferences)
-exec --no-startup-id compton
+exec --no-startup-id compton --config ~/.config/compton.conf
 
 # Custom binds
 bindsym $mod+Shift+m exec --no-startup-id gnome-system-monitor
