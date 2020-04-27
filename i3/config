@@ -23,6 +23,17 @@ workspace $workspace6 output $monitor_right
 
 set $mod Mod4
 
+# class                 border    backgro   text     indic   child_border
+client.focused          #00000000 #00000000 #0000000 #00000044 #00000044
+client.focused_inactive #00000000 #00000000 #d9d9d9  #00000044 #00000044
+client.unfocused        #00000000 #00000000 #d9d9d9  #00000044 #00000044
+client.urgent           #00000000 #00000000 #d9d9d9  #00000044 #00000044
+
+default_border none
+default_floating_border none
+hide_edge_borders both
+for_window [class="^.*"] border pixel 2 #get rid of tittlebars because gaps doesnt work
+
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 font pango:monospace 8
@@ -48,7 +59,7 @@ bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run
+#bindsym $mod+d exec dmenu_run
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -185,7 +196,6 @@ exec --no-startup-id feh --randomize --bg-scale ~/Pictures/wallpapers/*
 # i3 Gaps
 gaps inner 10
 gaps outer 10
-for_window [class="^.*"] border pixel 2 #get rid of tittlebars because gaps doesnt work
 
 # Compton transparency (use gnome preferences)
 exec --no-startup-id compton --config ~/.config/compton.conf
@@ -197,11 +207,6 @@ bindsym $mod+Shift+w exec --no-startup-id $HOME/bin/workflow
 
 # polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-
-# class      border          backgr          text        indic   child_border
-client.focused_inactive #0d1010 #212121 #d9d9d9 #0d1010 #063340
-client.unfocused #0d1010 #212121 #d9d9d9 #0d1010 #063340
-client.focused #d9d9d9 #cecece #0000000 #d9d9d9 #d9d9d9
 
 # albert
 exec --no-startup-id albert
