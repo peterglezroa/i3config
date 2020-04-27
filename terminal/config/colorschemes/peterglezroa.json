@@ -50,7 +50,7 @@
 		"cwd":                        "information:additional",
 		"cwd:current_folder":         { "fg": "white", "bg": "darkestcyan", "attrs": [] },
 		"cwd:divider":                { "fg": "gray7", "bg": "gray4", "attrs": [] },
-		"virtualenv":                 { "fg": "white", "bg": "green", "attrs": [] },
+		"virtualenv":                 { "fg": "white", "bg": "darkestgreen", "attrs": [] },
 		"attached_clients":           { "fg": "gray8", "bg": "gray0", "attrs": [] },
 
     "gitstatus":                 { "fg": "gray8",           "bg": "gray2", "attrs": [] },
