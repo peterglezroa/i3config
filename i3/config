@@ -4,6 +4,10 @@ set $workspace2 ""
 set $workspace3 ""
 set $workspace4 ""
 set $workspace5 ""
+set $workspace6 ""
+set $workspace7 "7"
+set $workspace8 "8"
+set $workspace9 "9"
 set $workspace10 "?"
 # Monitors
 set $monitor_left "HDMI-1"
@@ -15,8 +19,20 @@ workspace $workspace5 output $monitor_left
 # Right monitor
 workspace $workspace2 output $monitor_right
 workspace $workspace3 output $monitor_right
+workspace $workspace6 output $monitor_right
 
 set $mod Mod4
+
+# class                 border    backgro   text     indic   child_border
+client.focused          #00000000 #00000000 #0000000 #00000044 #00000044
+client.focused_inactive #00000000 #00000000 #d9d9d9  #00000044 #00000044
+client.unfocused        #00000000 #00000000 #d9d9d9  #00000044 #00000044
+client.urgent           #00000000 #00000000 #d9d9d9  #00000044 #00000044
+
+default_border none
+default_floating_border none
+hide_edge_borders both
+for_window [class="^.*"] border pixel 2 #get rid of tittlebars because gaps doesnt work
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -44,7 +60,6 @@ bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
 #bindsym $mod+d exec dmenu_run
-#bindsym $mod+d exec albert
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -106,10 +121,10 @@ bindsym $mod+2 workspace $workspace2
 bindsym $mod+3 workspace $workspace3
 bindsym $mod+4 workspace $workspace4
 bindsym $mod+5 workspace $workspace5
-bindsym $mod+6 workspace 6
-bindsym $mod+7 workspace 7
-bindsym $mod+8 workspace 8
-bindsym $mod+9 workspace 9
+bindsym $mod+6 workspace $workspace6
+bindsym $mod+7 workspace $workspace7
+bindsym $mod+8 workspace $workspace8
+bindsym $mod+9 workspace $workspace9
 bindsym $mod+0 workspace $workspace10
 
 # move focused container to workspace
@@ -118,10 +133,10 @@ bindsym $mod+Shift+2 move container to workspace $workspace2
 bindsym $mod+Shift+3 move container to workspace $workspace3
 bindsym $mod+Shift+4 move container to workspace $workspace4
 bindsym $mod+Shift+5 move container to workspace $workspace5
-bindsym $mod+Shift+6 move container to workspace 6
-bindsym $mod+Shift+7 move container to workspace 7
-bindsym $mod+Shift+8 move container to workspace 8
-bindsym $mod+Shift+9 move container to workspace 9
+bindsym $mod+Shift+6 move container to workspace $workspace6
+bindsym $mod+Shift+7 move container to workspace $workspace7
+bindsym $mod+Shift+8 move container to workspace $workspace8
+bindsym $mod+Shift+9 move container to workspace $workspace9
 bindsym $mod+Shift+0 move container to workspace $workspace10
 
 # reload the configuration file
@@ -181,10 +196,9 @@ exec --no-startup-id feh --randomize --bg-scale ~/Pictures/wallpapers/*
 # i3 Gaps
 gaps inner 10
 gaps outer 10
-for_window [class="^.*"] border pixel 2 #get rid of tittlebars because gaps doesnt work
 
 # Compton transparency (use gnome preferences)
-exec --no-startup-id compton
+exec --no-startup-id compton --config ~/.config/compton.conf
 
 # Custom binds
 bindsym $mod+Shift+m exec --no-startup-id gnome-system-monitor
@@ -193,11 +207,6 @@ bindsym $mod+Shift+w exec --no-startup-id $HOME/bin/workflow
 
 # polybar
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-
-# class      border          backgr          text        indic   child_border
-client.focused_inactive #0d1010 #212121 #d9d9d9 #0d1010 #063340
-client.unfocused #0d1010 #212121 #d9d9d9 #0d1010 #063340
-client.focused #d9d9d9 #cecece #0000000 #d9d9d9 #d9d9d9
 
 # albert
 exec --no-startup-id albert

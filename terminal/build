@@ -1,7 +1,0 @@
-# Needs pip
-sudo pip3 install powerline-shell
-powerline-shell --generate-config > ~/.powerline-shell.json
-git clone https://github.com/powerline/fonts ~/powerline_fonts
-cp /powerline_fonts/UbuntuMono/'Ubuntu Mono derivative Powerline.ttf' ~/.fonts
-# Cambiar preferencias font en terminal
-rm -r ~/powerline_fonts

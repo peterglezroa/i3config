@@ -39,6 +39,8 @@ enabled=true
 
 [org.albert.extension.system]
 enabled=true
+reboot=systemctl -i
+shutdown=systemctl poweroff -i
 
 [org.albert.extension.terminal]
 enabled=true
@@ -56,5 +58,5 @@ hideOnClose=false
 hideOnFocusLoss=true
 itemCount=8
 showCentered=true
-theme=Arc Dark Blue
+theme=Numix Rounded
 windowPosition=@Point(608 283)
