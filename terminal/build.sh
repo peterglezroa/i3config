@@ -45,3 +45,7 @@ echo ". \$HOME/z.sh" >> ~/.bashrc
 
 # Alias
 echo "alias venv=\"source .env/bin/activate\"" >> .profile
+
+# Set gnome terminal -> To change between profiles: `xdotool key shift+F10 r 1` where 1 is the profile number
+#dconf reset -f /org/gnome/terminal/
+#dconf load /org/gnome/terminal < gnome_terminal_settings.txt

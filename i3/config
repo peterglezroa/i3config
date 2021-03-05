@@ -5,7 +5,7 @@ set $workspace3 ""
 set $workspace4 ""
 set $workspace5 ""
 set $workspace6 ""
-set $workspace7 "7"
+set $workspace7 ""
 set $workspace8 "8"
 set $workspace9 "9"
 set $workspace10 "?"
@@ -179,9 +179,13 @@ bindsym $mod+r mode "resize"
 #}
 
 # Pulse Audio controls
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+#bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
+#bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
+#bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+# Amixer
+bindsym XF86AudioRaiseVolume exec "amixer -q sset Master,0 1+ unmute"
+bindsym XF86AudioLowerVolume exec "amixer -q sset Master,0 1- unmute"
+bindsym XF86AudioMute exec "amixer -q sset Master,0 toggle"
 
 # Screen brightness controls
 bindsym XF86MonBrightnessUp exec --no-startup-id $HOME/bin/brightness -inc # increase screen brightness
@@ -191,14 +195,14 @@ bindsym XF86MonBrightnessDown exec --no-startup-id $HOME/bin/brightness -dec
 bindsym $mod+m exec --no-startup-id $HOME/bin/monitors --toggle
 
 # Wallpaper
-exec --no-startup-id feh --randomize --bg-scale ~/Pictures/wallpapers/*
+exec --no-startup-id feh --bg-scale ~/Pictures/wallpapers/wallpaper.jpg
 
 # i3 Gaps
 gaps inner 10
 gaps outer 10
 
 # Compton transparency (use gnome preferences)
-exec --no-startup-id compton --config ~/.config/compton.conf
+exec_always --no-startup-id compton --config ~/.config/compton.conf
 
 # Custom binds
 bindsym $mod+Shift+m exec --no-startup-id gnome-system-monitor
@@ -213,3 +217,6 @@ exec --no-startup-id albert
 
 # flashfocus
 #exec_always --no-startup-id flashfocus
+
+# Theme Change
+bindsym $mod+Shift+t exec --no-startup-id $HOME/bin/themeChange
