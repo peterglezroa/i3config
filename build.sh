@@ -1,5 +1,5 @@
 #!/bin/bash
-sudo apt-get install python python-pip3 g++ vim font-awesome
+sudo apt-get install python python-pip3 g++ vim font-awesome wmctrl
 
 # Set i3 config file
 cp i3/config ~/.config/i3/config
